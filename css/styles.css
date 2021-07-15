@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 63vw;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 5vh;
+  color: var(--light-grey);
+  text-transform: uppercase;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 3vh;
+}
+
+.cards {
+  text-align: left;
+  padding: 3vw;
+}
+
+#left {
+  background-color: var(--orange);
+  border-radius: 5px 0 0 5px;
+}
+
+#mid {
+  background-color: var(--cyan);
+}
+
+#right {
+  background-color: var(--dark-cyan);
+  border-radius: 0 5px 5px 0;
+}
+
+.learn-more {
+  margin-top: 10vh;
+  height: 50px;
+  width: 150px;
+  border-radius: 32px;
+  border: var(--light-grey) 2px solid;
+  background-color: var(--light-grey);
+}
+
+.learn-more:hover {
+  cursor: pointer;
+}
+
+#btn-left {
+  color: var(--orange);
+}
+
+#btn-left:hover {
+  background-color: var(--orange);
+  color: var(--light-grey);
+}
+
+#btn-mid {
+  color: var(--cyan);
+}
+
+#btn-mid:hover {
+  background-color: var(--cyan);
+  color: var(--light-grey);
+}
+
+#btn-right {
+  color: var(--dark-cyan);
+}
+
+#btn-right:hover {
+  background-color: var(--dark-cyan);
+  color: var(--light-grey);
+}
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+@media only screen and (max-width: 480px) {
+  body {
+    height: 110vh;
+    margin-top: 5vh;
+    margin-bottom: 80vh;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+  }
+
+  .cards {
+    padding: 5vh;
+  }
+
+  #left {
+    border-radius: 5px 5px 0 0;
+  }
+
+  #right {
+    border-radius: 0 0 5px 5px;
+  }
+}
